@@ -1,0 +1,1 @@
+// Export fonksiyonu buraya yazılacak

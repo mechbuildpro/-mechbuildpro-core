@@ -1,0 +1,1 @@
+// Hesaplama fonksiyonu buraya yazılacak

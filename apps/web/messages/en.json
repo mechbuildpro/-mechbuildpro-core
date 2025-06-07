@@ -1,0 +1,15 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "welcome": "Welcome",
+    "error": "Error",
+    "success": "Success"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password",
+    "rememberMe": "Remember Me"
+  }
+} 

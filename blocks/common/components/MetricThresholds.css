@@ -1,0 +1,203 @@
+.metric-thresholds {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.thresholds-header {
+  margin-bottom: 20px;
+}
+
+.thresholds-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.thresholds-description {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.thresholds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.threshold-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.threshold-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.threshold-header:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.threshold-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.threshold-title h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.threshold-status {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.threshold-status.enabled {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: rgb(40, 167, 69);
+}
+
+.threshold-status.disabled {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.threshold-toggle {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.threshold-toggle:hover {
+  background-color: #dee2e6;
+}
+
+.threshold-settings {
+  padding: 15px;
+  border-top: 1px solid #dee2e6;
+}
+
+.threshold-input-group {
+  margin-bottom: 15px;
+}
+
+.threshold-input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.threshold-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.threshold-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.threshold-input input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.threshold-unit {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 40px;
+}
+
+.threshold-info {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #dee2e6;
+}
+
+.threshold-range {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.threshold-range:last-child {
+  margin-bottom: 0;
+}
+
+.range-label {
+  color: #666;
+}
+
+.range-value {
+  font-weight: 500;
+}
+
+.threshold-range.warning .range-value {
+  color: rgb(255, 193, 7);
+}
+
+.threshold-range.critical .range-value {
+  color: rgb(220, 53, 69);
+}
+
+/* Animation for threshold cards */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: #f8f9fa;
+  }
+}
+
+.threshold-card:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thresholds-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threshold-header {
+    padding: 12px;
+  }
+
+  .threshold-settings {
+    padding: 12px;
+  }
+
+  .threshold-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .threshold-unit {
+    margin-top: 5px;
+  }
+} 

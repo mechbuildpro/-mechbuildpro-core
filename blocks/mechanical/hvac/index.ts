@@ -1,0 +1,1 @@
+export { HVACComponent } from './Component'; 

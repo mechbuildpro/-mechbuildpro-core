@@ -1,0 +1,136 @@
+.metric-correlation {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.correlation-header {
+  margin-bottom: 20px;
+}
+
+.correlation-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.correlation-description {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.correlation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.correlation-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.correlation-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.correlation-value {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.correlation-details {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.correlation-strength,
+.correlation-direction {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.correlation-strength.strong {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: rgb(40, 167, 69);
+}
+
+.correlation-strength.moderate {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: rgb(255, 193, 7);
+}
+
+.correlation-strength.weak {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.correlation-strength.none {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.correlation-direction.positive {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: rgb(40, 167, 69);
+}
+
+.correlation-direction.negative {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: rgb(220, 53, 69);
+}
+
+.correlation-direction.none {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.correlation-chart {
+  height: 200px;
+  margin-top: 15px;
+}
+
+/* Animation for correlation cards */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: #f8f9fa;
+  }
+}
+
+.correlation-card:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .correlation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .correlation-card {
+    padding: 12px;
+  }
+
+  .correlation-value {
+    font-size: 1.5rem;
+  }
+
+  .correlation-chart {
+    height: 180px;
+  }
+} 

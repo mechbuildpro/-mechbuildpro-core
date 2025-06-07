@@ -1,0 +1,224 @@
+.metric-threshold-alert {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.threshold-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.threshold-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.metric-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.metric-button {
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.metric-button:hover {
+  background-color: #f8f9fa;
+  border-color: #4a90e2;
+}
+
+.metric-button.selected {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.threshold-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.threshold-chart {
+  height: 400px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.threshold-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.threshold-form {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.threshold-form h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.add-threshold-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-threshold-button:hover {
+  background-color: #357abd;
+}
+
+.threshold-list {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.threshold-list h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.threshold-card {
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.threshold-info {
+  flex: 1;
+}
+
+.threshold-range {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.threshold-details {
+  display: flex;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.threshold-severity {
+  font-weight: 600;
+}
+
+.remove-threshold-button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.remove-threshold-button:hover {
+  background-color: #c82333;
+}
+
+/* Animation for threshold cards */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.threshold-card:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .threshold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threshold-chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .threshold-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .metric-selector {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .metric-button {
+    flex: 1;
+    min-width: 120px;
+  }
+} 

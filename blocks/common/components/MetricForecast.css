@@ -1,0 +1,253 @@
+.metric-forecast {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-header {
+  margin-bottom: 20px;
+}
+
+.forecast-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.metric-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.metric-button {
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.metric-button:hover {
+  background-color: #f8f9fa;
+  border-color: #4a90e2;
+}
+
+.metric-button.selected {
+  color: white;
+}
+
+.forecast-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.control-group input[type="number"] {
+  width: 80px;
+  padding: 6px 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.control-group input[type="number"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.forecast-chart {
+  height: 400px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.forecast-details {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.forecast-details h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.forecast-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forecast-card {
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.forecast-metric {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.forecast-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.forecast-confidence,
+.forecast-error,
+.forecast-range {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forecast-bar {
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.forecast-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease-out;
+}
+
+.forecast-predictions {
+  margin-top: 20px;
+}
+
+.forecast-predictions h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.prediction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.prediction-time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.prediction-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.prediction-range {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+/* Animation for forecast cards */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.forecast-card {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .metric-selector {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .metric-button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .forecast-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .control-group {
+    width: 100%;
+  }
+
+  .control-group input[type="number"] {
+    width: 100%;
+  }
+} 

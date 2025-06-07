@@ -1,26 +1,62 @@
-@import "tailwindcss";
-
+/* === ROOT DEĞİŞKENLER === */
 :root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, Helvetica, sans-serif;
+  --font-mono: 'Courier New', monospace;
+
   --background: #ffffff;
   --foreground: #171717;
+
+  --bg: #ffffff;
+  --text: #000000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* === DARK TEMA AYARI === */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --bg: #0a0a0a;
+    --text: #ffffff;
   }
 }
 
+html.light {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+html.dark {
+  --bg: #0a0a0a;
+  --text: #ffffff;
+}
+
+/* === BODY === */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR === */
+nav {
+  background-color: #f4f4f4;
+  padding: 12px 24px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* === NAVBAR LINKLERİ === */
+nav a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }

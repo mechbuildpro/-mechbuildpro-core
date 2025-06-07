@@ -1,0 +1,131 @@
+.metric-presets {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.metric-presets h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.presets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.preset-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #eee;
+}
+
+.preset-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.preset-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.apply-button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+  background: #357abd;
+}
+
+.preset-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.preset-thresholds {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #eee;
+}
+
+.threshold-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.threshold-row:last-child {
+  border-bottom: none;
+}
+
+.threshold-row span:first-child {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.threshold-value {
+  font-family: monospace;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Animation for preset selection */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.preset-card.selected {
+  animation: highlight 1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .presets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preset-card {
+    padding: 15px;
+  }
+
+  .preset-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .threshold-value {
+    font-size: 0.8rem;
+  }
+} 

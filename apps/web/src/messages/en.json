@@ -1,0 +1,111 @@
+{
+  "Navbar": {
+    "title": "All-in-One Report Panel",
+    "selectModules": "Select the modules to include in the report:",
+    "pdf": "Export as PDF",
+    "aiSummary": "AI Summary for",
+    "hvac": "HVAC System",
+    "sprinkler": "Sprinkler System",
+    "zon": "Zone Layout",
+    "boq": "Material & BOQ",
+    "sozlesme": "Contract"
+  },
+  "Login": {
+    "title": "Login to your account"
+  },
+  "Zon": {
+    "title": "Zoning Management Panel",
+    "name": "Zone Name",
+    "floor": "Floor",
+    "room": "Room Name",
+    "type": "Zone Type",
+    "systems": "Systems",
+    "clean": "Clean Air",
+    "smoke": "Smoke Extraction",
+    "fire": "Fire Zone",
+    "service": "Service Zone",
+    "other": "Other",
+    "add": "Add Zone",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF"
+  },
+  "Material": {
+    "title": "Material & BOQ Panel",
+    "name": "Material Name",
+    "quantity": "Quantity",
+    "unit": "Unit",
+    "unitPrice": "Unit Price",
+    "total": "Total",
+    "add": "Add Material",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF",
+    "toggle": "Show Price Columns"
+  },
+  "Contract": {
+    "title": "Contract & Process Tracker",
+    "main": "Contract",
+    "protocol": "Protocol",
+    "correspondence": "Correspondence",
+    "type": "Document Type",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "rev": "Revision",
+    "note": "Note",
+    "add": "Add Document",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF"
+  },
+  "Report": {
+    "title": "All-in-One Report Panel",
+    "selectModules": "Select the modules to include in the report:",
+    "pdf": "Export as PDF",
+    "aiSummary": "AI Summary for",
+    "hvac": "HVAC System",
+    "sprinkler": "Sprinkler System",
+    "zon": "Zone Layout",
+    "boq": "Material & BOQ",
+    "sozlesme": "Contract"
+  },
+  "Timeline": {
+    "title": "Project Timeline",
+    "name": "Task Name",
+    "start": "Start Date",
+    "end": "End Date",
+    "duration": "Duration",
+    "status": "Status",
+    "planned": "Planned",
+    "inprogress": "In Progress",
+    "done": "Completed",
+    "add": "Add Task",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF",
+    "days": "days"
+  },
+  "Stock": {
+    "title": "Stock & Procurement Panel",
+    "material": "Material Name",
+    "quantity": "Received Quantity",
+    "used": "Used Quantity",
+    "remaining": "Remaining",
+    "unit": "Unit",
+    "supplier": "Supplier",
+    "receivedDate": "Received Date",
+    "add": "Add Item",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF"
+  },
+  "Progress": {
+    "title": "Progress Payment Panel",
+    "item": "Item",
+    "unit": "Unit",
+    "unitPrice": "Unit Price",
+    "totalQty": "Total Quantity",
+    "doneQty": "Completed Quantity",
+    "deduction": "Deduction",
+    "total": "Gross Amount",
+    "net": "Net Amount",
+    "add": "Add Line",
+    "excel": "Export to Excel",
+    "pdf": "Export as PDF"
+  }
+}

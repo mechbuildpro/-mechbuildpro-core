@@ -1,0 +1,1 @@
+/**\n * Validates if a string is a valid email address.\n * @param email The email string to validate.\n * @returns True if the email is valid, false otherwise.\n */\nexport function isValidEmail(email: string): boolean {\n  // Basic regex for email validation\n  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;\n  return emailRegex.test(email);\n}\n 

@@ -1,0 +1,168 @@
+.metric-comparison {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comparison-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.metric-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.metric-button {
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.metric-button:hover {
+  background-color: #f8f9fa;
+  border-color: #4a90e2;
+}
+
+.metric-button.selected {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.comparison-chart {
+  height: 400px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.correlation-matrix {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.correlation-matrix h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.matrix-grid {
+  display: grid;
+  gap: 2px;
+  background: #dee2e6;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #dee2e6;
+}
+
+.correlation-cell {
+  background: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.correlation-cell:hover {
+  background: #f8f9fa;
+  cursor: help;
+}
+
+.correlation-cell.strong {
+  background: rgba(40, 167, 69, 0.1);
+  color: rgb(40, 167, 69);
+}
+
+.correlation-cell.moderate {
+  background: rgba(255, 193, 7, 0.1);
+  color: rgb(255, 193, 7);
+}
+
+.correlation-cell.weak {
+  background: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.self-correlation {
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+/* Animation for correlation cells */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.2);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.correlation-cell:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .metric-selector {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .metric-button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .matrix-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

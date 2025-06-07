@@ -1,1 +1,0 @@
-// Component birleşimi buraya yazılacak

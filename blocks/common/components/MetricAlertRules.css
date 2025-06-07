@@ -1,0 +1,268 @@
+.metric-alert-rules {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.alert-rules-header {
+  margin-bottom: 20px;
+}
+
+.alert-rules-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.alert-rules-description {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.alert-rules-actions {
+  margin-bottom: 20px;
+}
+
+.add-rule-button {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.add-rule-button:hover {
+  background-color: #357abd;
+}
+
+.new-rule-form {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-group select,
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.value-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.value-input input {
+  flex: 1;
+}
+
+.unit {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 40px;
+}
+
+.notification-options {
+  display: flex;
+  gap: 15px;
+}
+
+.notification-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.save-rule-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.save-rule-button:hover {
+  background-color: #218838;
+}
+
+.alert-rules-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.alert-rule-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.rule-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rule-title h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.rule-severity {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.rule-severity.info {
+  background-color: rgba(23, 162, 184, 0.1);
+  color: rgb(23, 162, 184);
+}
+
+.rule-severity.warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: rgb(255, 193, 7);
+}
+
+.rule-severity.critical {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: rgb(220, 53, 69);
+}
+
+.rule-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-rule {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.toggle-rule.enabled {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: rgb(40, 167, 69);
+}
+
+.toggle-rule.disabled {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: rgb(108, 117, 125);
+}
+
+.delete-rule {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(220, 53, 69, 0.1);
+  color: rgb(220, 53, 69);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.delete-rule:hover {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+
+.rule-details {
+  padding: 15px;
+}
+
+.rule-condition {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rule-notifications {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.notification-tag {
+  padding: 2px 8px;
+  background-color: rgba(74, 144, 226, 0.1);
+  color: rgb(74, 144, 226);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Animation for rule cards */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: #f8f9fa;
+  }
+}
+
+.alert-rule-card:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alert-rules-list {
+    grid-template-columns: 1fr;
+  }
+
+  .rule-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .rule-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .notification-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+} 

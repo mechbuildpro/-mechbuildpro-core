@@ -44,31 +44,31 @@ mechbuild-core/
 
 // Blok ve modül mimarisi - Başlangıç dosya yapısı
 
-// 7. Pis Su Tesisatı (Wastewater) Modülü
-export const PissuModule = {
-  id: "pissu",
-  title: "Pis Su Drenaj Sistemi",
-  form: "blocks/pissu/Form.tsx",
-  logic: "blocks/pissu/logic.ts",
-  doc: "blocks/pissu/doc.md",
-  component: "blocks/pissu/Component.tsx",
-  export: "blocks/pissu/export.ts"
+// 8. Yağmur Drenaj Modülü
+export const YagmurModule = {
+  id: "yagmur",
+  title: "Yağmur Drenaj Sistemi",
+  form: "blocks/yagmur/Form.tsx",
+  logic: "blocks/yagmur/logic.ts",
+  doc: "blocks/yagmur/doc.md",
+  component: "blocks/yagmur/Component.tsx",
+  export: "blocks/yagmur/export.ts"
 };
 
-// Pissu modülünün dosya şablonları (oluşturulacak)
+// yagmur modülünün dosya şablonları (oluşturulacak)
 // Form.tsx
 /*
 import React from "react";
-export default function PissuForm() {
+export default function YagmurForm() {
   return (
     <form className="grid gap-4">
       <label>
-        Kat Sayısı
+        Çatı Alanı (m²)
         <input type="number" className="input" />
       </label>
       <label>
-        Armatür Sayısı
-        <input type="number" className="input" />
+        Yağış Şiddeti (L/s.m²)
+        <input type="number" className="input" defaultValue={0.03} />
       </label>
       <button type="submit" className="btn">Hesapla</button>
     </form>
@@ -78,23 +78,20 @@ export default function PissuForm() {
 
 // logic.ts
 /*
-export function hesapPisSuCapi(armatursayisi: number): string {
-  if (armatursayisi <= 3) return "50 mm";
-  if (armatursayisi <= 6) return "75 mm";
-  if (armatursayisi <= 12) return "100 mm";
-  return "125 mm+";
+export function hesapYagmurDebisi(alan: number, yagis: number = 0.03): number {
+  return Number((alan * yagis).toFixed(2));
 }
 */
 
 // Component.tsx
 /*
 import React from "react";
-import PissuForm from "./Form";
-export default function PissuComponent() {
+import YagmurForm from "./Form";
+export default function YagmurComponent() {
   return (
     <section>
-      <h2>Pis Su Borulama</h2>
-      <PissuForm />
+      <h2>Yağmur Suyu Drenajı</h2>
+      <YagmurForm />
     </section>
   );
 }
@@ -102,16 +99,16 @@ export default function PissuComponent() {
 
 // doc.md
 /*
-# Pis Su Tesisatı Modülü
-Bu modül, kat ve armatür sayısına göre önerilen pis su boru çapını belirler.
-- Girişler: Kat sayısı, armatür adedi
-- Hesaplama: TS EN 12056’ya göre çapa dönüşüm tablosu
+# Yağmur Drenaj Modülü
+Bu modül çatı alanına ve yağış şiddetine göre debi hesabı yapar.
+- Giriş: m² alan, L/s.m² yağış değeri
+- Kaynak: TSE 825, DSİ Yağış Şiddet Katsayıları
 */
 
 // export.ts
 /*
-export function exportPissuData(girdi) {
-  const csv = `Kat Sayısı, Armatür Sayısı, Boru Çapı\n${girdi.kat},${girdi.adet},${girdi.cap}`;
+export function exportYagmurData(input) {
+  const csv = `Alan (m²), Yağış (L/s.m²), Toplam Debi (L/s)\n${input.alan},${input.yagis},${input.debi}`;
   return new Blob([csv], { type: "text/csv" });
 }
 */

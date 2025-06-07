@@ -1,0 +1,112 @@
+.metric-predictive-analytics {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.predictive-header {
+  margin-bottom: 20px;
+}
+
+.predictive-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.predictive-description {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.predictive-chart {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.predictive-details {
+  margin-top: 20px;
+}
+
+.predictive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.predictive-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+}
+
+.predictive-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.predictive-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.predictive-value.increasing {
+  color: rgb(220, 53, 69);
+}
+
+.predictive-value.decreasing {
+  color: rgb(40, 167, 69);
+}
+
+.predictive-value.stable {
+  color: rgb(108, 117, 125);
+}
+
+.predictive-description {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Animation for predictive cards */
+@keyframes highlight {
+  0% {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  100% {
+    background-color: #f8f9fa;
+  }
+}
+
+.predictive-card:hover {
+  animation: highlight 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .predictive-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .predictive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .predictive-card {
+    padding: 12px;
+  }
+
+  .predictive-value {
+    font-size: 1.2rem;
+  }
+} 

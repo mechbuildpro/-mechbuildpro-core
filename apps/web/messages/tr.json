@@ -1,0 +1,15 @@
+{
+  "common": {
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "welcome": "Hoş Geldiniz",
+    "error": "Hata",
+    "success": "Başarılı"
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "forgotPassword": "Şifremi Unuttum",
+    "rememberMe": "Beni Hatırla"
+  }
+} 

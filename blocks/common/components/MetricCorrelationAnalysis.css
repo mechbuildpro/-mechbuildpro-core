@@ -1,0 +1,201 @@
+.metric-correlation-analysis {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.correlation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.correlation-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.correlation-summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #28a745;
+  padding: 8px 16px;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 20px;
+}
+
+.correlation-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.correlation-chart {
+  height: 400px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.correlation-list {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.correlation-list h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.correlation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.correlation-card {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.2s ease;
+}
+
+.correlation-card:hover {
+  transform: translateY(-2px);
+}
+
+.correlation-card .correlation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.correlation-strength {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.correlation-type {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.correlation-type[style*="rgba(40, 167, 69, 0.1)"] {
+  color: #28a745;
+}
+
+.correlation-type[style*="rgba(220, 53, 69, 0.1)"] {
+  color: #dc3545;
+}
+
+.correlation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.correlation-metrics {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.correlation-value {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.correlation-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Animation for correlation cards */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.correlation-card {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.correlation-card:nth-child(1) { animation-delay: 0.1s; }
+.correlation-card:nth-child(2) { animation-delay: 0.2s; }
+.correlation-card:nth-child(3) { animation-delay: 0.3s; }
+.correlation-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scrollbar styling */
+.correlation-cards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.correlation-cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.correlation-cards::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.correlation-cards::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .correlation-content {
+    grid-template-columns: 1fr;
+  }
+
+  .correlation-chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .correlation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .correlation-summary {
+    align-self: flex-start;
+  }
+
+  .correlation-card .correlation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .correlation-strength,
+  .correlation-type {
+    align-self: flex-start;
+  }
+} 

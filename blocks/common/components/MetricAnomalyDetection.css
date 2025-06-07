@@ -1,0 +1,196 @@
+.metric-anomaly-detection {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.anomaly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.anomaly-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.anomaly-summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #dc3545;
+  padding: 8px 16px;
+  background: rgba(220, 53, 69, 0.1);
+  border-radius: 20px;
+}
+
+.anomaly-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.anomaly-chart {
+  height: 400px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.anomaly-list {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.anomaly-list h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.anomaly-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.anomaly-card {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.2s ease;
+}
+
+.anomaly-card:hover {
+  transform: translateY(-2px);
+}
+
+.anomaly-card .anomaly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.anomaly-severity {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.anomaly-metric {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.anomaly-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.anomaly-time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.anomaly-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.anomaly-deviation {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.anomaly-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Animation for anomaly cards */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anomaly-card {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.anomaly-card:nth-child(1) { animation-delay: 0.1s; }
+.anomaly-card:nth-child(2) { animation-delay: 0.2s; }
+.anomaly-card:nth-child(3) { animation-delay: 0.3s; }
+.anomaly-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scrollbar styling */
+.anomaly-cards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.anomaly-cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.anomaly-cards::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.anomaly-cards::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .anomaly-content {
+    grid-template-columns: 1fr;
+  }
+
+  .anomaly-chart {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anomaly-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .anomaly-summary {
+    align-self: flex-start;
+  }
+
+  .anomaly-card .anomaly-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .anomaly-severity,
+  .anomaly-metric {
+    align-self: flex-start;
+  }
+} 

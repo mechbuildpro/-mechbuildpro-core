@@ -1,0 +1,1 @@
+// Types for HVAC will be defined here 

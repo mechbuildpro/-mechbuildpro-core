@@ -1,0 +1,111 @@
+{
+  "Navbar": {
+    "title": "Tüm Sistemler Rapor Paneli",
+    "selectModules": "Rapor için dahil edilecek modülleri seçin:",
+    "pdf": "PDF olarak indir",
+    "aiSummary": "Yapay Zeka Özeti:",
+    "hvac": "HVAC Sistemi",
+    "sprinkler": "Sprinkler Sistemi",
+    "zon": "Zon Planı",
+    "boq": "Malzeme ve Keşif",
+    "sozlesme": "Sözleşme"
+  },
+  "Login": {
+    "title": "Hesabınıza giriş yapın"
+  },
+  "Zon": {
+    "title": "Zon Yönetim Paneli",
+    "name": "Zon Adı",
+    "floor": "Kat",
+    "room": "Mahal Adı",
+    "type": "Zon Tipi",
+    "systems": "Sistemler",
+    "clean": "Temiz Hava",
+    "smoke": "Duman Tahliyesi",
+    "fire": "Yangın Zonu",
+    "service": "Servis Zonu",
+    "other": "Diğer",
+    "add": "Zon Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir"
+  },
+  "Material": {
+    "title": "Malzeme ve Keşif Paneli",
+    "name": "Malzeme Adı",
+    "quantity": "Miktar",
+    "unit": "Birim",
+    "unitPrice": "Birim Fiyat",
+    "total": "Toplam",
+    "add": "Malzeme Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir",
+    "toggle": "Fiyat Sütunlarını Göster"
+  },
+  "Contract": {
+    "title": "Sözleşme ve Süreç Takibi",
+    "main": "Sözleşme",
+    "protocol": "Protokol",
+    "correspondence": "Yazışma",
+    "type": "Belge Türü",
+    "startDate": "Başlangıç Tarihi",
+    "endDate": "Bitiş Tarihi",
+    "rev": "Revizyon",
+    "note": "Not",
+    "add": "Belge Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir"
+  },
+  "Report": {
+    "title": "Tüm Sistemler Rapor Paneli",
+    "selectModules": "Rapor için dahil edilecek modülleri seçin:",
+    "pdf": "PDF olarak indir",
+    "aiSummary": "Yapay Zeka Özeti:",
+    "hvac": "HVAC Sistemi",
+    "sprinkler": "Sprinkler Sistemi",
+    "zon": "Zon Planı",
+    "boq": "Malzeme ve Keşif",
+    "sozlesme": "Sözleşme"
+  },
+  "Timeline": {
+    "title": "İş Programı",
+    "name": "Görev Adı",
+    "start": "Başlama Tarihi",
+    "end": "Bitiş Tarihi",
+    "duration": "Süre",
+    "status": "Durum",
+    "planned": "Planlandı",
+    "inprogress": "Devam Ediyor",
+    "done": "Tamamlandı",
+    "add": "Görev Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir",
+    "days": "gün"
+  },
+  "Stock": {
+    "title": "Stok ve Sipariş Paneli",
+    "material": "Malzeme Adı",
+    "quantity": "Gelen Miktar",
+    "used": "Kullanılan Miktar",
+    "remaining": "Kalan",
+    "unit": "Birim",
+    "supplier": "Tedarikçi",
+    "receivedDate": "Geliş Tarihi",
+    "add": "Malzeme Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir"
+  },
+  "Progress": {
+    "title": "Hakediş Paneli",
+    "item": "İş Kalemi",
+    "unit": "Birim",
+    "unitPrice": "Birim Fiyat",
+    "totalQty": "Toplam Miktar",
+    "doneQty": "Gerçekleşen Miktar",
+    "deduction": "Kesinti",
+    "total": "Brüt Tutar",
+    "net": "Net Tutar",
+    "add": "Kalem Ekle",
+    "excel": "Excel'e Aktar",
+    "pdf": "PDF olarak indir"
+  }
+}
